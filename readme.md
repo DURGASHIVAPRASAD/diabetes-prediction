@@ -88,6 +88,16 @@ Run predictions:
 
 9. Project Images and Results
 
+## Project Screenshots
+
+### Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Application Screenshot
+
+![Diabetes Prediction App](images/accuracy_plot.png)
+
 Exploratory Data Analysis
 
 Model Evaluation
