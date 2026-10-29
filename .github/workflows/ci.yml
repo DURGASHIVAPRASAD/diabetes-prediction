@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -31,4 +31,10 @@ jobs:
 
       - name: Verify dataset
         run: |
-          python -c "import pandas as pd; df=pd.read_csv('diabetes.csv'); assert len(df) > 0; print('Dataset loaded:', df.shape)"
+          python -c "import pandas as pd; df=pd.read_csv('diabetes.csv'); assert len(df)>0; print('Dataset shape:', df.shape)"
+
+      - name: Train ML model
+        run: python train_model.py
+
+      - name: Run automated tests
+        run: python -m pytest tests/ -v
